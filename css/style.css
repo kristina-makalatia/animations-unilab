@@ -1,0 +1,64 @@
+.wraper {
+	width: 400px;
+	height: 400px;
+	background-color: blue;
+	position: relative;
+/*	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 2s;*/
+	transition: all 0.5s linear 0.5s;
+}
+.child-box {
+	width: 150px;
+	height: 150px;
+	background-color: red;
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%, -50%) rotate(40deg);
+	/*transition: all 0.4s ease 0.5s;*/
+	animation: myanimation 5s infinite;
+}
+
+/*Hover Effects*/
+/*.wraper:hover {
+	background-color: yellow;
+
+}
+.child-box:hover {
+	transform: translate(-50%, -50%) rotate(360deg);
+	background-color: aqua;
+}*/
+
+/*Chta-icon*/
+.chat-icon {
+	height: 80px;
+	animation: chatmove 5s 2;
+}
+.image-wraper {
+	margin-top: 50px;
+	/*position: relative;*/
+}
+
+/*Keyframes*/
+@keyframes myanimation {
+	0% {transform: translate(-50%, -50%) rotate(40deg);}
+	25% {transform: translate(-50%, -50%) rotate(90deg);}
+	50% {transform: translate(-50%, -50%) rotate(360deg);}
+	100% {transform: translate(-50%, -50%) rotate(40deg);}
+}
+
+/*@keyframes chatmove {
+	0% {left: 50px;}
+	25% {left: 150px;}
+	50% {left: 350px;}
+	100% {left: 550px;}
+}*/
+
+@keyframes chatmove {
+	0% {transform: translateX(50px);}
+	25% {transform: translateX(150px);}
+	50% {transform: translateX(350px);}
+	100% {transform: translateX(550px);}
+}
